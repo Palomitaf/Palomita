@@ -1,0 +1,20 @@
+.lista 
+
+.lista__item {
+    color: aquamari; margin: 10px;
+    list-style: squar;
+}
+
+
+.lista--danino {
+    color: #000;
+    margin: 10px; 
+    list-style: squar;
+}
+
+
+.item--importante {
+    color:#000;
+    margin: 1opx;
+
+}

@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+div {
+    padding: 20px;
+    background-color: #999;
+}
+
+
+a {
+    background-color: #fff;
+    color: #999;
+    margin: 20px;
+padding: 20px;
+opacity: 0.6;
+
+}
+
+p {
+    background-color: #888;
+
+}

@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+div, body {
+    box-sizing: border-box;
+}
+.flexbox {
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px;  
+    margin: 20px;
+   justify-content: space-evenly;
+   align-items: baseline;
+   height: 350px;
+}
+
+.flex-item {
+    background-color: #800;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    direction: rtl;
+    width: 100px;
+}
+.flex-item :first-child {
+    background-color: #f77;
+    height: 70px;
+    font: 60px;
+    
+}
+.flex-item :last-child {
+    background-color: #800;
+    font-size: 80px;
+
+}

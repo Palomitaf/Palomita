@@ -1,0 +1,26 @@
+body {
+    margin: 0%;
+    font-family: sans-serif;
+}
+
+div, body {
+    box-sizing: border-box;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    background-color: #ccc;
+    padding: 30px;
+    border: 1px solid #f00;
+    flex-grow: 1;
+}
+
+@media print and (max-with: 600px) {
+    .flexbox {
+         flex-direction: column;
+    }
+}

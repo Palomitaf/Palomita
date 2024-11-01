@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Geneva;
+
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+    margin-top: 50PX;
+    font-size: 60PX;
+    text-align: center;
+    font-weight: bold;
+    transition-property: background-color, color;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: #f00;
+    position: relative;
+  
+}
+
+.box:hover .box {
+    background-color: #f00;
+    color: #fff;
+
+} 

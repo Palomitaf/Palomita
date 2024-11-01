@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #fff;
+    border: 1px; solid: #0006;
+    width -space: pre-wrap; normal;
+    text-overflow: hidden; keep-all; auto-phrase; break-worl; anywhere;
+
+}
+h1 {
+    text-wrap: balance; pretty;
+}

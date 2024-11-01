@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+
+div, body {
+    box-sizing: border-box;
+}
+.flexbox {
+    display: flex;
+    flex-flow: row;  
+    border: 2px;
+    margin: 20px;
+    height: 100px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff;
+}
+.flex-item :first-child {
+    background-color: #f77;
+    flex-grow: 2;
+}
+.flex-item {
+    background-color: #800;
+    color: #800;
+    font-size: 40px;
+    text-align: center;
+    direction: rtl;
+    width: 100px;
+    flex-grow: 1;
+}
+.flex-item :last-child {
+    background-color: #000;
+}
