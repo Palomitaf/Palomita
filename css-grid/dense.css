@@ -1,0 +1,37 @@
+body {
+    margin: 0%;
+    font-family: sans-serif;
+}
+
+body ,div {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-flow: dense;
+    margin: auto;
+    gap: 10px;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.grid-item {
+    background-color: #48e;
+    font-size: 30px;
+    border-radius: 16px;
+    background-image: url(imagen.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-item:nth-child(10){
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+
+.grid-item:hover {
+    opacity: 0.74;
+}
