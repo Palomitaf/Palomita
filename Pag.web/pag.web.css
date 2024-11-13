@@ -4,7 +4,7 @@
 
 body {
     margin: 0%;
-    font-family: sans-serif;
+    font-family: fantasy;
     background-color: #d9efe2;
     color: #101632dd;
 }
@@ -23,6 +23,13 @@ div, ul, nav, header, footer, a, li, label {
     align-items: center;
     container-type: inline-size;
     container-name: header;
+    margin-inline: auto;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    font-size: 20PX;
+
+
 }
 
 .header__open-nav-button {
@@ -62,7 +69,7 @@ div, ul, nav, header, footer, a, li, label {
 
 .header__logo {
     max-width: 100%;
-    width: 150px;
+    width: 120px;
     margin: 10px 20px;
 }
 
@@ -75,7 +82,7 @@ div, ul, nav, header, footer, a, li, label {
     text-decoration: none;
 }
 
-.header__nav-item a:not( :is(:hover,:active)) {
+.header__nav-item :is(:hover,:active) {
     text-decoration: underline;
 }
 
@@ -88,6 +95,7 @@ div, ul, nav, header, footer, a, li, label {
         height: auto;
         width: auto;
         justify-content: space-between;
+        z-index: 1;
     }
 
    .header__nav-list {
@@ -107,6 +115,7 @@ div, ul, nav, header, footer, a, li, label {
 
 
 /* - - - - - - PROFILE SECTION - - - - - - - */
+
 .profile {
     container-name: profile;
     container-type: inline-size;
@@ -118,6 +127,8 @@ div, ul, nav, header, footer, a, li, label {
     justify-content: center;
     background-color: #fff;
     max-width: 1400px;
+    margin-inline: auto; 
+    padding-inline: 40px;
 }
 
 .profile__data-container {
@@ -164,6 +175,10 @@ h1 {
     margin-left: 0;
 }
 
+.profile__skill-name {
+    color: #1e8449;
+}
+
 .load-bar__bar {
     background-color: #7dcea0;
     border-radius: 4px;
@@ -184,24 +199,37 @@ h1 {
 /* ------- PROFILE QUERIES ------- */
 
 
-@container profile (min-width: 7200px) {
+@container profile (min-width:720px){
      .profile__wrapper {
         flex-direction: row;
         padding: 20px;
         background-color: transparent;
-        height: 90vh;
+        
+        margin: auto;
     }
 
     .profile__data-container {
         background-color: #fff;
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        border-radius: 0px 25px 25px 0;
+        box-shadow: 0px 0px 9px #0002;
+    }
+
+    h1 {
+        margin-top: 0%;
+        font-size: 4rem;
+        text-wrap: balance;
     }
 
     .profile__data {
         max-width: 620px;
        
     }
-    .profile__img {
+    .profile__img-container {
         max-height: initial;
+        border-radius: 25px 0 0 25px;
 
     }
 
@@ -211,3 +239,127 @@ h1 {
         width: 620px;
     }
 }
+
+/* ------- PROFILE ENDS ------- */
+
+
+/* ------- PORTFOLIO SECTION  ------- */
+
+.portfolio {
+    background-color: #7dcea0;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    container-name: portfolio;
+    container-type: inline-size;
+    justify-content: space-evenly;
+}
+
+.portfolio__title {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.portfolio__project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    gap: 12px;
+    padding: 12px;
+    min-height: 80vh;
+}
+
+.portfolio__project {
+    background-image: linear-gradient(#0009, #0009), url(12-03-21-cannabis-2.webp);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+}
+
+.portfolio__project:hover {
+    opacity: 0.74;
+    outline: 2px solid #fff6;
+}
+
+/* ------- PORTFOLIO QUERIES ------- */
+
+@container portfolio (min-width: 56.25rem) {
+    .portfolio__project-container {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+
+    .portfolio__project:first-child{
+        grid-column: span 2;
+    }
+
+    .portfolio__project:nth-child(6){
+        grid-column: span 2; 
+    }
+}
+
+
+@container portfolio (min-width: 81.25rem) {
+    .portfolio__project-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .portfolio__project:first-child{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .portfolio__project:nth-child(6){
+        grid-column: span 4; 
+    }
+}
+
+
+/* ------- PORTFOLIO ENDS ------- */
+
+
+/* ------- CONTACT SECTION ------- */
+
+.form {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    container-name: form;
+    container-type: inline-size;
+}
+
+.from__from {
+    flex: 1;
+    padding: 12px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.from__input-container :is(input, textarea) {
+    width: 100%;
+    padding: 9px 6px;
+    font-size: 16px;
+    margin: 4px;
+    border: none;
+    box-shadow: 2px 2px 4px #0003;
+}
+
+.from__input-container textarea {
+    resize: none;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.from__input-container input[type="submit"] {
+    padding: 12px;
+    background-color: #7dcea0;
+    color: #fff;
+}
+
