@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+}
+
+.box {
+    margin: auto;
+    padding: 20px 50px;
+    backdrop-filter: hue-rotate(200deg);
+    position: absolute;
+    width: 100%;
+    left: 200px;
+    border: 4px solid #000;
+}
+
+img {
+    max-width: 50%;
+    object-fit: cover;
+    filter: invert();
+}
