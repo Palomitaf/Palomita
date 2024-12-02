@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    font-family: sans-serif;
+}
+
+.box {
+    font-size: 30px;
+    padding: 0 40px;
+    border: 6px solid #000;
+    width: 50vw;
+    height: 100vh;
+    overflow: scroll;
+}
+.crecer {
+    height: 200vh;
+} 

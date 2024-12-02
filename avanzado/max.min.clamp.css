@@ -1,0 +1,26 @@
+body {
+    margin: 0%;
+    font-family: sans-serif;
+    padding: 20px;
+}
+* {
+    box-sizing: border-box;
+}
+
+.box {
+ 
+    background-color: rgb(57, 28, 131);
+    display: grid;
+    place-content: center;
+    color: aliceblue;
+    font-size: clamp(2.4rem,2.2vw,4rem);
+    margin: 120px auto;
+    font-size: 30px;
+    padding: 0 40px;
+    border: 6px solid #070707;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+}

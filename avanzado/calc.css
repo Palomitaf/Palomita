@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal: rgb(102, 146, 213);
+    --alto-del-box: 200px;
+}
+
+body {
+    margin: 0%;
+    font-family: monospace;
+}
+
+.box {
+    font-size: clamp(2.4rem,2.2vw,4rem);
+    font-size: 30px;
+    padding: 0 40px;
+    border: 6px solid #000;
+}
+
+.box:first-child {
+    background-color: aquamarine;
+    height: var(--alto-del-box);
+    
+} 
+
+.box:nth-child(2) {
+    height: calc(100vh - var(--alto-del-box));
+    overflow: auto;
+}
