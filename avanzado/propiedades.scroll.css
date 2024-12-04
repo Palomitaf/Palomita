@@ -10,10 +10,13 @@ body {
 .box {
     font-size: 30px;
     padding: 0 40px;
-    border: 6px solid #000;
+    border: 6px solid #efa54b;
     width: 50vw;
     height: 100vh;
     overflow: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: rgb(90, 189, 62) #000;
+    scrollbar-width: auto;
 }
 .crecer {
     height: 200vh;

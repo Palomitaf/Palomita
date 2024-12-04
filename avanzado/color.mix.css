@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.box {
+    font-size: 30px;
+    width: fit-content;
+    padding: 320px;
+    background-color: color-mix(in srgb, #f44 30%, #48e 30%);
+}
+
+.box2 {
+    background-color: #f447;
+}
+
+.box2 p {
+    font-size: 30px;
+    padding: 320%;
+    background-color: #48e6;
+}

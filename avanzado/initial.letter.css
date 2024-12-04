@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0%;
+    font-family: monospace;
+}
+.box {
+    font-size: 30px;
+    padding: 0 40px;
+    border: 5px solid #000;
+}
+
+p::first-letter {
+    initial-letter: 4;
+    padding: 10px;
+    padding-bottom: 0%;
+    padding-left: 2px;
+    color: rgb(34, 163, 177);
+    font-family: impact;
+}

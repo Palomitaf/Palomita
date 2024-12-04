@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    font-family: sans-serif;
+    background-color: #000;
+}
+
+img {
+    max-width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 21%, 33% 78%, 100% 78%, 100% 100%, 0 100%, 0 73%, 61% 21%, 0 21%);
+    border: 10px solid #fff;
+}
