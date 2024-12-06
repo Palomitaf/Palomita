@@ -7,6 +7,10 @@ body,div,ul,li,a,h1,h2,h3,h4 {
     padding: 0%;
 }
 
+label, .sidebar_nav {
+    user-select: none;
+}
+
 body {
     --bg-color: color-mix(in srgb, #c6b2f2 70%, #fff);
     --sidebar-color: #fff;
@@ -31,7 +35,6 @@ body {
 }
 .sidebar_form {
     position: absolute;
-    display: none;
 }
 
 .sidebar_nav {
@@ -144,11 +147,56 @@ body {
     display: none;
 }
 
-input [type="checkbox"] {
+input[type="checkbox"] {
     display: none;
 }
 
 .sidebar_form {
     position: absolute;
     z-index: 20;
+    right: -1rem;
+}
+
+.sidebar label {
+    position: relative;
+    background-color: var(--bg-color);
+    color: var(--sidebar-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    /* padding: 4rem; */
+}
+
+.sidebar label::before, 
+.sidebar label::after {
+    content: '';
+    background-color: var(--bg-color);
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background-color: transparent;
+
+}
+
+.sidebar label::before {
+    top: -25px;
+    left: 19px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 4px 4px 0 4px var(--bg-color);
+}
+
+.sidebar label::after {
+    bottom: -25px;
+    left: 19px;
+    border-top-right-radius: 25px;
+    box-shadow: 4px -4px 0 4px var(--bg-color);
+}
+ 
+input[type="checkbox"]:checked ~ label {
+    color: var(--bg-color);
+    background-color: var(--sidebar-color);
+}
+
+input[type="checkbox"]:checked ~ label::after, 
+input[type="checkbox"]:checked ~ label::before {
+    display: none;
 }
