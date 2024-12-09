@@ -24,12 +24,14 @@ div, body {
     direction: rtl;
     width: 100px;
 }
+
 .flex-item :first-child {
     background-color: #f77;
     height: 70px;
     font: 60px;
     
 }
+
 .flex-item :last-child {
     background-color: #800;
     font-size: 80px;
