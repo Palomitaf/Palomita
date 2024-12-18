@@ -5,7 +5,7 @@
 body {
     font-family: montserrat;
     --bg-color: #b5b5e6;
-    --chat-bg-color: #fff;
+    --text-color: #333;
     --dark-color: #2a2aec;
 }
 
@@ -15,16 +15,97 @@ body, div, ul, li, a, h1, h2, h3, h4, p {
 }
 
 body {
-    background-color: var(--bg-color);
+    background-image: url(f62668aac2142589f49ef247058f0172.gif);
     height: 200dvh;
+    background-size: cover;
+    background-position: center;
+
 }
 
 header {
     min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: difference;
+}
+
+.text-container {
+    min-height: 100vh;
+    top: 0%;
+    display: flex;
+    font-size: clamp(1rem, 10vw, 12rem);
+    color: var(--text-color);
+    font-weight: 600;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 3vw;
+    mix-blend-mode: hard-light;
+    animation: aparecer-texto both;
+    animation-timeline: scrol();
+    animation-range-start: cover 20%;
+}
+
+.left-text {
+    color: #fff;
+    padding-left: 4vw;
+}
+
+.right-text {
+    font-weight: 900;
+}
+
+.left-text div {
+    filter: drop-shadow(0px 0px 1px   var(--dark-color));
+    box-shadow:var(--dark-color);
 }
 
 img {
     filter: grayscale();
-    mix-blend-mode: screen;
     position: fixed;
+    top: 0;
+    animation: aparecer both;
+    animation-timeline: scroll();
+    max-height: 100vh;
+    mix-blend-mode: darken;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        mix-blend-mode: saturation;
+        filter: grayscale();
+        translate: 0 -20%;
+        scale: .8;
+    }
+
+    100% {
+        opacity: 1;
+        filter: grayscale();
+        translate: 0 0;
+        scale: 1;
+    }
+
+}
+
+@keyframes aparecer-texto {
+    0% {
+            opacity: 0;
+            translate: 0 -20%;
+            scale: 1.2;
+   }
+    
+    100% {
+            opacity: 1;
+            translate: 0 0;
+            scale: 1;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .text-container {
+        justify-content: space-evenly;
+    }
+    
 }
